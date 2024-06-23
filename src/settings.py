@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_filters',
     "rest_framework",
+    'storages',
     "corsheaders",  
     'specializations',   
     'skills',
@@ -149,3 +150,25 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+# AWS config
+
+AWS_ACCESS_KEY_ID = 'AKIA6GBMHX5NNUIGM4GD'
+AWS_SECRET_ACCESS_KEY = '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'
+
+# Basic storage config for Amazon S3
+
+AWS_STORAGE_BUCKET_NAME = 'denki-portfolio'
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_FILE_OVERWRITE = False
+
+STORAGES = {
+  "default": {
+    "BACKEND": "storages.backends.s3boto3.S3StaticStorage"
+  },
+  "staticfiles": {
+    "BACKEND": "storages.backends.s3boto3.S3StaticStorage"
+  },
+}
