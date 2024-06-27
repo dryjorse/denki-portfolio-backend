@@ -9,6 +9,6 @@ class ProjectsView(ModelViewSet):
   serializer_class = ProjectSerializer
   filter_backends = [OrderingFilter, DjangoFilterBackend]
   filterset_fields = ['specialization']
-  ordering_fields = ['date, order']
+  ordering_fields = ['date', 'order']
   ordering = ['-order', 'date']  
 

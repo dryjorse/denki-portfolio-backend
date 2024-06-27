@@ -3,7 +3,7 @@ from skills.models import Skill
 
 class Specialization(models.Model):
   title = models.CharField("Название", max_length=250)
-  icon = models.ImageField(upload_to="images/specializations")
+  icon = models.ImageField("Иконка", upload_to="images/specializations")
   skills = models.ManyToManyField(Skill)
 
   class Meta:
