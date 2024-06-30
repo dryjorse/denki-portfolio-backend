@@ -31,11 +31,8 @@ SECRET_KEY = 'django-insecure-ul@0ga4_439l2_+09po8wp7ywp&^$1bw=#$^u4551tcqv2)aj0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://dryjorse.github.io/denki-portfolio-site']
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'https://dryjorse.github.io/denki-portfolio-site',
-)
+ALLOWED_HOSTS = ['*']
+CORS_ALLOWED_ORIGINS = ["https://dryjorse.github.io"]
 
 
 # Application definition
